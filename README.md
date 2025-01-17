@@ -37,8 +37,8 @@ The prerequisites are of course:
 ## Start
 After installation try 
 
-   $ cd /tmp
-   $ jupyter notebook
+    $ cd /tmp
+    $ jupyter notebook
    
 choose `juCL` 
 
@@ -51,7 +51,7 @@ Try some CL commands
 Notice the terminal, where `SBCL` is running. One may ignore it, however,
 it accepts cl commands as well (sharing common env!).
 
-![terminal](./docs/jucl3.jpg`raw=true)
+![terminal](./docs/jucl3.jpg?raw=true)
 
 Last but not least, there is the jupyter console showing the log.
 
