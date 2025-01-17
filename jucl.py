@@ -64,15 +64,16 @@ class CL(Kernel):
         
         # send code to hunchentoot and get response
         r = self.server.put(code)
-        if r.ok: 
-            standard_output = self.server.output
-        else:
-            standard_output = "failure."
-            
-            
+       
         if not silent:
-            stream_content = {'name': 'stdout', 'text': standard_output}
-            self.send_response(self.iopub_socket, 'stream', stream_content)
+            if r.ok:
+              stdout = self.server.output
+              stream_content = {'name': 'stdout', 'text': stdout}
+              self.send_response(self.iopub_socket, 'stream', stream_content)
+            else:
+              stdout = "FAILED: have a look at the  juCL terminal\n"
+              stderr = {'name': 'stderr', 'text': stdout}
+              self.send_response(self.iopub_socket, 'stream', stderr)
 
         return {'status': 'ok',
                 'execution_count': self.execution_count,
