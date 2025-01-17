@@ -1,5 +1,5 @@
 # juCL
-A (almost) fool-proof Jupyter kernel for Common Lisp
+A (almost) fool-proof Jupyter kernel for Common Lisp in very few lines of lisp and py.
 
 :warning: in progress :construction:
 
@@ -9,7 +9,7 @@ __Hunchentoot__[^2] (the awesome Common Lisp web server) for the
 communication.
 
 ## Installation
-There a three files necessary
+There are three files necessary
 
 1. `jucl.py` -- the wrapper kernel (python3)
 2. `jucl.lisp` -- loads Hunchentoot (POPEN in `jucl.py`)
@@ -58,6 +58,7 @@ Last but not least, there is the jupyter console showing the log.
 ![jupyter-log](./docs/jucl4.jpg?raw=true)
 
 
+## For Developers
 TODO: coming more ...
 
 📅 17-JAN-2025 
