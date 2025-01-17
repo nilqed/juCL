@@ -1,0 +1,3 @@
+{"argv":["python3","-Xfrozen_modules=off","-m","jucl.jucl", "-f", "{connection_file}"],
+ "display_name":"juCL", "language": "common-lisp"}
+
