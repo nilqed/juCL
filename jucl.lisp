@@ -13,8 +13,13 @@
 (defparameter +port+ 4242)
 
 ;;; cl-eval
-(defun cl-eval (code) (eval (read-from-string code)))
+;;; (ignore-errors ... ) <==>
+;;; (handler-case (progn . forms)
+;;; (error (condition) (values nil condition)))  
+(defun cl-eval (code) (handler-case  (eval (read-from-string code))
+    (error (condition) (values condition nil))))
   
+
  
 ;;; WEB server
 (hunchentoot:define-easy-handler (cl-string-eval :uri "/eval") (code)

@@ -71,7 +71,9 @@ class CL(Kernel):
               stream_content = {'name': 'stdout', 'text': stdout}
               self.send_response(self.iopub_socket, 'stream', stream_content)
             else:
-              stdout = "FAILED: have a look at the  juCL terminal\n"
+              #stdout = "FAILED: have a look at the  juCL terminal\n"
+              #TODO: handler => r.ok=true , i.e. "else" not active
+              stdout = self.server.output
               stderr = {'name': 'stderr', 'text': stdout}
               self.send_response(self.iopub_socket, 'stream', stderr)
 
