@@ -17,7 +17,11 @@
 ;;; (handler-case (progn . forms)
 ;;; (error (condition) (values nil condition)))  
 (defun cl-eval (code) (handler-case  (eval (read-from-string code))
-    (error (condition) (values condition nil))))
+    (error (condition)
+       (format t "[JUCL-ERROR]: ~a~%" condition)
+       (list 'jucl-error condition))))
+
+
   
 
  
