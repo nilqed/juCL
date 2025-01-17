@@ -46,7 +46,7 @@ choose `juCL`
 
 Try some CL commands
 
-![notebook](./docs/jucl2.jpg`raw=true)
+![notebook](./docs/jucl2.jpg?raw=true)
 
 Notice the terminal, where `SBCL` is running. One may ignore it, however,
 it accepts cl commands as well (sharing common env!).
@@ -55,12 +55,12 @@ it accepts cl commands as well (sharing common env!).
 
 Last but not least, there is the jupyter console showing the log.
 
-![jupyter-log](./docs/jucl4.jpg`raw=true)
+![jupyter-log](./docs/jucl4.jpg?raw=true)
 
 
 TODO: coming more ...
 
-
+📅 17-JAN-2025 
 
 
 [^1]:https://jupyter-client.readthedocs.io/en/stable/wrapperkernels.html
