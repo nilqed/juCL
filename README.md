@@ -58,8 +58,16 @@ Last but not least, there is the jupyter console showing the log.
 ![jupyter-log](./docs/jucl4.jpg?raw=true)
 
 
+### Error handling
+
+![jupyter-log](./docs/errhan.jpg?raw=true)
+
+### Quitting
+
+![jupyter-log](./docs/quit.jpg?raw=true)
+
 ## For Developers
-TODO: coming more ...
+TODO: stage1 branch / always reinstall with `./install.sh` 
 
 📅 17-JAN-2025 
 

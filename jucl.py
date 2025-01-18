@@ -66,14 +66,12 @@ class CL(Kernel):
         r = self.server.put(code)
        
         if not silent:
-            if r.ok:
+            if r.ok and not self.server.output. startswith("(JUCL-ERROR"):
               stdout = self.server.output
               stream_content = {'name': 'stdout', 'text': stdout}
               self.send_response(self.iopub_socket, 'stream', stream_content)
             else:
-              #stdout = "FAILED: have a look at the  juCL terminal\n"
-              #TODO: handler => r.ok=true , i.e. "else" not active
-              stdout = self.server.output
+              stdout = self.server.output.lstrip("(JUCL-ERROR")
               stderr = {'name': 'stderr', 'text': stdout}
               self.send_response(self.iopub_socket, 'stream', stderr)
 
