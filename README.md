@@ -31,7 +31,7 @@ To install them, clone this repo and either run `./ìnstall.sh` or perform the c
 
 The prerequisites are of course:
 
-* a Lisp (only __SBCL__ tested at the moment)
+* a CL + QuickLisp (only __SBCL__ tested at the moment)
 * Python 3: `jupyter` and the `requests` library (pip).
 
 ## Start
@@ -59,7 +59,7 @@ Last but not least, there is the jupyter console showing the log.
 
 
 ## For Developers
-TODO: coming more ...
+TODO: see branch *stage1* (a.s. [similar](https://github.com/nilqed/jfricas.pip)
 
 📅 17-JAN-2025 
 
