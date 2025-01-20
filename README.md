@@ -31,7 +31,7 @@ To install them, clone this repo and either run `./ìnstall.sh` or perform the c
 
 The prerequisites are of course:
 
-* a Lisp (only __SBCL__ tested at the moment)
+* a CL + QuickLisp (only __SBCL__ tested at the moment)
 * Python 3: `jupyter` and the `requests` library (pip).
 
 ## Start
@@ -66,8 +66,7 @@ Last but not least, there is the jupyter console showing the log.
 
 ![jupyter-log](./docs/quit.jpg?raw=true)
 
-## For Developers
-TODO: stage1 branch / always reinstall with `./install.sh` 
+
 
 📅 17-JAN-2025 
 
