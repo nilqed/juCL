@@ -67,6 +67,26 @@ Last but not least, there is the jupyter console showing the log.
 ![jupyter-log](./docs/quit.jpg?raw=true)
 
 
+## SBCL Pipes (example)
+The example notebook `docs/redpsl_pipe.ipynb` shows an example of howto
+connect terminal applications by using `sb-ext:run-program` :
+
+    (defun makepipe (app &optional args)
+        (let ((proc (sb-ext:run-program app args
+                     :input :stream
+                     :output :stream
+                     :wait nil
+                     :search t)))
+        (when proc
+             (make-two-way-stream (sb-ext:process-output proc)
+                  (sb-ext:process-input proc)))))
+
+    ...
+    
+
+![jucl-redpsl-pipe.png](./docs/jucl-redpsl-pipe.png?raw=true)
+
+
 
 📅 17-JAN-2025 
 
