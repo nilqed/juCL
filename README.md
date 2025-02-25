@@ -87,6 +87,13 @@ connect terminal applications by using `sb-ext:run-program` :
 ![jucl-redpsl-pipe.png](./docs/jucl-redpsl-pipe.png?raw=true)
 
 
+## Weyl/SBCL Example
+Notebook file and exported *.pdf (LaTeX) and *.lisp.
+
+  * [nb-weyl-tests1](./docs/weyl-tests1.ipynb)
+  * [pdf-weyl-tests1](./docs/weyl-tests1.pdf)
+  * [lisp-weyl-tests1](./docs/weyl-tests1.lisp)
+
 
 📅 17-JAN-2025 
 
