@@ -68,9 +68,16 @@ class CL(Kernel):
        
         if not silent:
             if r.ok and not self.server.output. startswith("(JUCL-ERROR"):
-              stdout = self.server.output
-              stream_content = {'name': 'stdout', 'text': stdout}
-              self.send_response(self.iopub_socket, 'stream', stream_content)
+              if self.server.output.lstrip().startswith('$'):
+                data = dict()
+                data['text/latex'] = self.server.output
+                # Display LaTeX  // later HTML, MathML ...
+                display = {'data':data, 'metadata':{}}
+                self.send_response(self.iopub_socket, 'display_data', display)
+              else:    
+                stdout = self.server.output
+                stream_content = {'name': 'stdout', 'text': stdout}
+                self.send_response(self.iopub_socket, 'stream', stream_content)
             else:
               stdout = self.server.output.lstrip("(JUCL-ERROR")
               stderr = {'name': 'stderr', 'text': stdout}

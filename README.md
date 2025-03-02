@@ -101,13 +101,31 @@ Note that `juCL` displays only returned `values`, while printing to
 you want to have this output in the notebook as well, then you may
 use for example
 
-   (with-output-to-string (*standard-output*) 
-     (describe 'string))
+    (with-output-to-string (*standard-output*) 
+        (describe 'string))
+     
      
 where otherwise `(describe ...)` and so on return `NIL` to `juCL`.
 
 
 ![with-output-to-string](./docs/w-out-to-screen.png?raw=true)
+
+
+## LaTeX output
+A first attempt to display **LaTeX** output. 
+Whenever a return value (string) starts with the `$`-character, then
+the data is interpreted as a latex string. 
+
+![latex-output](./docs/latex-output.png)
+
+
+### TODO:
+
+* coloring
+* code completion
+* inspection
+* other formats (html,mathml, ...)
+
 
 
 
