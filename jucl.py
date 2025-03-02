@@ -63,6 +63,7 @@ class CL(Kernel):
       user_expressions=None, allow_stdin=False):
         
         # send code to hunchentoot and get response
+        code = "(progn {0})".format(code)  # todo: more options
         r = self.server.put(code)
        
         if not silent:
