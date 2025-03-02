@@ -95,6 +95,21 @@ Notebook file and exported *.pdf (LaTeX) and *.lisp.
   * [lisp-weyl-tests1](./docs/weyl-tests1.lisp)
 
 
+## STANDARD-OUPUT
+Note that `juCL` displays only returned `values`, while printing to
+\*standdard-output\* appears on the accompanied terminal only. If
+you want to have this output in the notebook as well, then you may
+use for example
+
+   (with-output-to-string (*standard-output*) 
+     (describe 'string))
+     
+where otherwise `(describe ...)` and so on return `NIL` to `juCL`.
+
+
+![with-output-to-string](./docs/w-out-to-string.png?raw=true)
+
+
 📅 17-JAN-2025 
 
 
