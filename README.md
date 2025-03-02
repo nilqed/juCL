@@ -107,7 +107,8 @@ use for example
 where otherwise `(describe ...)` and so on return `NIL` to `juCL`.
 
 
-![with-output-to-string](./docs/w-out-to-string.png?raw=true)
+![with-output-to-string](./docs/w-out-to-screen.png?raw=true)
+
 
 
 📅 17-JAN-2025 
