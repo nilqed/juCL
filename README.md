@@ -1,7 +1,10 @@
 # juCL
 A (almost) fool-proof Jupyter kernel for Common Lisp in very few lines of lisp and py.
 
-:warning: in progress :construction:
+:warning: in progress :construction: 
+Don't use this for production!
+
+There is an **excellent** kernel at https://github.com/yitzchak/common-lisp-jupyter
 
 Instead of implementing the kernel in CL itself, we use 
 IPython’s kernel machinery[^1] and 
